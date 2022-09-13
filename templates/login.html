@@ -1,0 +1,40 @@
+{% extends "base.html" %}
+{% block content %}
+        
+<div id="wrap">
+    <div id="main" class="container clear-top">
+        <div class="container">
+            <h1>Sign In</h1>
+            <form method="POST">
+                <input type="hidden" name="csrfmiddlewaretoken" value="8YSsTUT8OXFGMVHC2EFH4EgUw1JrxrPSq2BTHDTvrySHleXDkrRYUCeoMnDlRC5a">
+                <fieldset>
+                    <div id="div_id_username" class="form-group"> 
+                        <label for="id_username" class=" requiredField"> 
+                            Username
+                            <span class="asteriskField">*</span> 
+                        </label> 
+                        <div class=""> 
+                            <input type="text" name="username" autofocus="" autocapitalize="none" autocomplete="username" maxlength="150" class="textinput textInput form-control" required="" id="id_username"> 
+                        </div> 
+                    </div> 
+                    <div id="di_id_password" class="form-group"> 
+                        <label for="id_password" class=" requiredField">
+                            Password
+                            <span class="asteriskField">*</span>
+                        </label>
+                        <div class="">
+                            <input type="password" name="password" autocomplete="current-password" class="textinput textInput form-control" required="" id="id_password">
+                        </div>
+                    </div>
+                </fieldset>
+                <button class="btn btn-outline-primary" type="submit">Submit</button>
+            </form>
+            <p>
+                Don't have an account? 
+                <a href="/register/">Sign up</a>
+            </p>
+        </div>
+    </div>
+</div>
+
+{% endblock content %}
