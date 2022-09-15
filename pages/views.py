@@ -20,8 +20,5 @@ class LoginPageView(TemplateView):
 class RegisterPageView(TemplateView):
     template_name = "register.html"
 
-class Cerrar_sesionPageView(TemplateView):
-    template_name = "cerrar_sesion.html"
-
-    #cachaste lo que pasa¿
-
+class CRUDPageView(TemplateView):
+    template_name = "CRUD.html"
