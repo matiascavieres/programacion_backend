@@ -39,7 +39,8 @@ MIDDLEWARE = [
     "django.middleware.clickjacking.XFrameOptionsMiddleware",
 ]
 
-ROOT_URLCONF = "proyecto_D_B50_N4_P12_C1.urls"
+ROOT_URLCONF = "proyecto_D_B50_N4_P12_C1.urls" #from django.conf import settings
+                                            #from django.conf.urls.static import static
 
 TEMPLATES = [
     {
@@ -112,10 +113,10 @@ STATICFILES_DIRS = [
     '/pages/static/',
 ]
 
-# STATIC_URL = '/pages/static/'
-
-# STATICFILES_DIRS = (os.path.join(BASE_DIR, 'programacion_backend/pages/static'),)
-
+STATICFILES_FINDERS= [
+    'django.contrib.staticfiles.finders.FileSystemFinder',
+    'django.contrib.staticfiles.finders.AppDirectoriesFinder',
+]
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field
