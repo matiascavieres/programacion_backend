@@ -1,12 +1,18 @@
 {% extends "base.html" %}
+{% block title %}Registro{% endblock %}
 {% block content %}
-<div class="container">
-    <div class="row">
-        <div class="col-md-12">
-            <h1>Iniciar Sesion</h1>
-            <h2>Toma tussi gasta la plata</h2>
-            <img src="https://picsum.photos/200/300" alt="foto">
-        </div>
-    </div>
-</div>
-{% endblock content %}
+<form class="form-signin">
+    <h1 class="h3 mb-3 font-weight-normal">Registro</h1>
+    <label for="inputEmail" class="sr-only">Email</label><br>
+    <input type="email" id="inputEmail" class="form-control" placeholder="Email address" required autofocus><br>
+    <label for="inputUsername" class="sr-only">Nombre de usuario</label><br>
+    <input type="text" id="inputUsername" class="form-control" placeholder="Nombre de usuario" required><br>
+    <label for="inputPassword" class="sr-only">Contraseña</label><br>
+    <input type="password" id="inputPassword" class="form-control" placeholder="Contraseña" required><br>
+    <label for="inputPassword" class="sr-only">Repetir contraseña</label><br>
+    <input type="password" id="inputPasswordRepeat" class="form-control" placeholder="Repetir contraseña" required><br>
+    <div class="checkbox mb-3"></div><br>
+    
+    <button class="btn btn-lg btn-primary btn-block" type="submit">Registrarse</button>
+    </form>
+{% endblock %}
