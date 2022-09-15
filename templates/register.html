@@ -1,18 +1,26 @@
 {% extends "base.html" %}
+{% load static %}
+<link rel="stylesheet" href="{% static 'css/register.css' %}">
+
 {% block title %}Registro{% endblock %}
 {% block content %}
-<form class="form-signin">
-    <h1 class="h3 mb-3 font-weight-normal">Registro</h1>
-    <label for="inputEmail" class="sr-only">Email</label><br>
-    <input type="email" id="inputEmail" class="form-control" placeholder="Email address" required autofocus><br>
-    <label for="inputUsername" class="sr-only">Nombre de usuario</label><br>
-    <input type="text" id="inputUsername" class="form-control" placeholder="Nombre de usuario" required><br>
-    <label for="inputPassword" class="sr-only">Contraseña</label><br>
-    <input type="password" id="inputPassword" class="form-control" placeholder="Contraseña" required><br>
-    <label for="inputPassword" class="sr-only">Repetir contraseña</label><br>
-    <input type="password" id="inputPasswordRepeat" class="form-control" placeholder="Repetir contraseña" required><br>
-    <div class="checkbox mb-3"></div><br>
-    
-    <button class="btn btn-lg btn-primary btn-block" type="submit">Registrarse</button>
-    </form>
+<div id="wrap">
+    <div id="main" class="container clear-top">
+        <div class="container">
+            <form class="form-signin">
+                <h1 class="h3 mb-3 font-weight-normal">Registro</h1>
+                <label for="inputEmail" class="sr-only">Email</label><br>
+                <input type="email" id="inputEmail" class="form-control" placeholder="Email address" required autofocus><br>
+                <label for="inputUsername" class="sr-only">Nombre de usuario</label><br>
+                <input type="text" id="inputUsername" class="form-control" placeholder="Nombre de usuario" required><br>
+                <label for="inputPassword" class="sr-only">Contraseña</label><br>
+                <input type="password" id="inputPassword" class="form-control" placeholder="Contraseña" required><br>
+                <label for="inputPassword" class="sr-only">Repetir contraseña</label><br>
+                <input type="password" id="inputPasswordRepeat" class="form-control" placeholder="Repetir contraseña" required><br>
+                <div class="checkbox mb-3"></div><br>
+                <button class="btn btn-lg btn-primary btn-block" type="submit">Registrarse</button>
+            </form>
+        </div>
+    </div>
+</div>
 {% endblock %}
