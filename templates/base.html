@@ -2,8 +2,7 @@
 <html>
 
 <head>
-    {% load static %}
-    <link rel="stylesheet" type="text/css" href="{% static 'css/base.css' %}">
+
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -21,14 +20,16 @@
 </head>
 
 <body>
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'css/base.css' %}">
     <div class="container-fullwidth mb-3">
         <div class="row">
             <div class="col-md-12">
                 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
                     <div class="container-fluid">
                         <a class="navbar-brand" href="{% url 'home' %}">
-                            <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Flogodix.com%2Flogo%2F1758841.png&f=1&nofb=1"
-                                alt="" width="30" height="24">
+                            <img src="{% static '\img\Logo_.png' %}" alt="My image"
+                                alt="" width="35" height="30">
                         </a>
                         <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                             data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
@@ -85,5 +86,6 @@
         </div>
     </div>
 </body>
+
 
 </html>
