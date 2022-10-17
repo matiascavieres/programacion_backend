@@ -1,6 +1,6 @@
 from django.http import HttpResponse
 from django.views.generic import TemplateView
-
+from users.models import Habito
 
 def homePageView(request):
     return HttpResponse("Hola mundo!")
@@ -10,7 +10,6 @@ class HomePageView(TemplateView):
 
 class AboutPageView(TemplateView):
     template_name = "about.html"
-
 
 class LoginPageView(TemplateView):
     template_name = "login.html"
