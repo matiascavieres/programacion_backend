@@ -3,18 +3,23 @@
 
 {% block title %} CRUD {% endblock %}
 {% block content %}
-<body>    {% load static %}
+{% load static %}
+
+<body>
     <script type="text/javascript" src="{% static 'js/CRUD.js' %}"></script>
-    <link rel="stylesheet" type="text/css" href="{% static 'css/crud.css' %}">
+    <link rel="stylesheet" href="{% static 'css/crud.css' %}">
     <div class="container-lg">
 
         <div class="table-responsive">
             <div class="table-wrapper">
                 <div class="table-title">
                     <div class="row">
-                        <div class="col-sm-8"><h2><b>Habit Tracker </b></h2></div>
+                        <div class="col-sm-8">
+                            <h2><b>Habit Tracker </b></h2>
+                        </div>
                         <div class="col-sm-4">
-                            <button type="button" class="btn btn-info add-new"><i class="fa fa-plus"></i> Add New</button>
+                            <button type="button" class="btn btn-info add-new"><i class="fa fa-plus"></i> Add
+                                New</button>
                         </div>
                     </div>
                 </div>
@@ -33,9 +38,12 @@
                             <td>El gimnasio</td>
                             <td>1 Hora</td>
                             <td>
-                                <a class="add" title="Add" data-toggle="tooltip"><i class="material-icons">&#xE03B;</i></a>
-                                <a class="edit" title="Edit" data-toggle="tooltip"><i class="material-icons">&#xE254;</i></a>
-                                <a class="delete" title="Delete" data-toggle="tooltip"><i class="material-icons">&#xE872;</i></a>
+                                <a class="add" title="Add" data-toggle="tooltip"><i
+                                        class="material-icons">&#xE03B;</i></a>
+                                <a class="edit" title="Edit" data-toggle="tooltip"><i
+                                        class="material-icons">&#xE254;</i></a>
+                                <a class="delete" title="Delete" data-toggle="tooltip"><i
+                                        class="material-icons">&#xE872;</i></a>
                             </td>
                         </tr>
                         <tr>
@@ -43,9 +51,12 @@
                             <td>Cuando despierte</td>
                             <td>10 Paginas</td>
                             <td>
-                                <a class="add" title="Add" data-toggle="tooltip"><i class="material-icons">&#xE03B;</i></a>
-                                <a class="edit" title="Edit" data-toggle="tooltip"><i class="material-icons">&#xE254;</i></a>
-                                <a class="delete" title="Delete" data-toggle="tooltip"><i class="material-icons">&#xE872;</i></a>
+                                <a class="add" title="Add" data-toggle="tooltip"><i
+                                        class="material-icons">&#xE03B;</i></a>
+                                <a class="edit" title="Edit" data-toggle="tooltip"><i
+                                        class="material-icons">&#xE254;</i></a>
+                                <a class="delete" title="Delete" data-toggle="tooltip"><i
+                                        class="material-icons">&#xE872;</i></a>
                             </td>
                         </tr>
                         <tr>
@@ -53,11 +64,14 @@
                             <td>Donde este</td>
                             <td>2L </td>
                             <td>
-                                <a class="add" title="Add" data-toggle="tooltip"><i class="material-icons">&#xE03B;</i></a>
-                                <a class="edit" title="Edit" data-toggle="tooltip"><i class="material-icons">&#xE254;</i></a>
-                                <a class="delete" title="Delete" data-toggle="tooltip"><i class="material-icons">&#xE872;</i></a>
+                                <a class="add" title="Add" data-toggle="tooltip"><i
+                                        class="material-icons">&#xE03B;</i></a>
+                                <a class="edit" title="Edit" data-toggle="tooltip"><i
+                                        class="material-icons">&#xE254;</i></a>
+                                <a class="delete" title="Delete" data-toggle="tooltip"><i
+                                        class="material-icons">&#xE872;</i></a>
                             </td>
-                        </tr>      
+                        </tr>
                     </tbody>
                 </table>
             </div>

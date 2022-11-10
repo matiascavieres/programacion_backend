@@ -1,5 +1,9 @@
 {% extends "base.html" %}
+{% load static %}
+
+{% block title %}About{% endblock %}
 {% block content %}
+
 
 <div class="container">
     <div class="row">
@@ -15,7 +19,7 @@
             
             <p class="fst-italic">Liberar a las personas del procrastinar. Potenciando su mente a un estado organizativo que busca el elevar su aprendizaje a un nivel más proactivo y analítico.</p>
             </br>
-            <img src="https://yuupiyu.com/wp-content/uploads/2020/02/10-habitos-saludables-logromotion.png" width="1000" height="500" >
+            <img src="{% static '\img\habitos.png' %}" width="1000" height="500" >
         </div>
 
 

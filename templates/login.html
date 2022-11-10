@@ -1,26 +1,37 @@
 {% extends "base.html" %}
+{% load static %}
+
+{% block title %} Login {% endblock %}
+<html lang="en">
+
 {% block content %}
-        
 
-<div id="wrap">
-    <div id="main" class="container clear-top">
-        <div class="container">
-            <form class="form-signin">
-                <h1 class="h3 mb-3 font-weight-normal">Login</h1>
-                <label for="inputEmail" class="sr-only">Email</label>
-                <input type="email" id="inputEmail" class="form-control" placeholder="Ingrese su mail" required autofocus>
-                <label for="inputPassword" class="sr-only">Contraseña</label>
-                <input type="password" id="inputPassword" class="form-control" placeholder="Ingrese su contraseña" required>
-                <div class="checkbox mb-3"></div>
-                <button class="btn btn-lg btn-primary btn-block" type="submit">Login</button>
+<body>
+    <div class="container text-center align-items-center">
+        <main class="form-signin ">
+            <form>
+                <img src="{% static '\img\Logo_.png' %}" alt="My image" alt="" width="35" height="35">
+                <h1 class="h3 mb-3 fw-normal">Por favor Ingrese</h1>
+
+                <div class="form-floating">
+                    <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
+                    <label for="floatingInput">Email</label>
+                </div>
+                <div class="form-floating">
+                    <input type="password" class="form-control" id="floatingPassword" placeholder="Password">
+                    <label for="floatingPassword">Contraseña</label>
+                </div>
+
+                <div class="checkbox mb-3">
+                    <label>
+                        <input type="checkbox" value="remember-me"> Recordar
+                    </label>
+                </div>
+                <button class="w-100 btn btn-lg btn-primary" type="submit">Ingresar</button>
             </form>
-            <p>
-            ¿Aún no tienes cuenta? 
-            <a href="{% url 'register' %}">Registro</a>
-            </p>
-        </div>
+        </main>
     </div>
-</div>
-
-
+</body>
 {% endblock content %}
+
+</html>

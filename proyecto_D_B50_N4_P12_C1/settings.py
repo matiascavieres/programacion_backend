@@ -69,7 +69,7 @@ DATABASES = {
         "ENGINE": "django.db.backends.mysql",
         "NAME": "habitos",
         "USER": "root",
-        "PASSWORD": "12345",
+        "PASSWORD": "",
         "HOST": "localhost",
         "PORT": "3306"
     }
@@ -114,12 +114,7 @@ import os
 STATIC_ROOT = '/static'
 STATIC_URL = '/static/'
 
-STATICFILES_DIRS = (os.path.join(BASE_DIR, 'static'),)
-
-STATICFILES_FINDERS= [
-    'django.contrib.staticfiles.finders.FileSystemFinder',
-    'django.contrib.staticfiles.finders.AppDirectoriesFinder',
-]
+STATICFILES_DIRS = [BASE_DIR / "static"]
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field
