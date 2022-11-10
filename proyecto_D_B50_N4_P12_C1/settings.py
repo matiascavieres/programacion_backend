@@ -39,8 +39,8 @@ MIDDLEWARE = [
     "django.middleware.clickjacking.XFrameOptionsMiddleware",
 ]
 
-ROOT_URLCONF = "proyecto_D_B50_N4_P12_C1.urls" #from django.conf import settings
-                                            #from django.conf.urls.static import static
+ROOT_URLCONF = "proyecto_D_B50_N4_P12_C1.urls"  # from django.conf import settings
+# from django.conf.urls.static import static
 
 TEMPLATES = [
     {
@@ -71,7 +71,7 @@ DATABASES = {
         "USER": "root",
         "PASSWORD": "",
         "HOST": "localhost",
-        "PORT": "3306"
+        "PORT": "3306",
     }
 }
 
@@ -111,8 +111,8 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/4.1/howto/static-files/
 import os
 
-STATIC_ROOT = '/static'
-STATIC_URL = '/static/'
+STATIC_ROOT = "/static"
+STATIC_URL = "/static/"
 
 STATICFILES_DIRS = [BASE_DIR / "static"]
 
@@ -121,6 +121,6 @@ STATICFILES_DIRS = [BASE_DIR / "static"]
 
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 
-LOGIN_URL = '/login/'
-LOGIN_REDIRECT_URL = '/'
-LOGOUT_REDIRECT_URL = '/'
+LOGIN_URL = "/login/"
+LOGIN_REDIRECT_URL = "/"
+LOGOUT_REDIRECT_URL = "/"

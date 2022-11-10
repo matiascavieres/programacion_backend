@@ -11,5 +11,14 @@ class Habito(models.Model):
     cantidad = models.CharField(max_length=20, verbose_name="Cantidad")
 
     def __str__(self):
-        fila = "Hábito: " + self.habito + " - " + "Dónde: " + self.donde + " - " + "Cantidad: " + self.cantidad
+        fila = (
+            "Hábito: "
+            + self.habito
+            + " - "
+            + "Dónde: "
+            + self.donde
+            + " - "
+            + "Cantidad: "
+            + self.cantidad
+        )
         return fila
