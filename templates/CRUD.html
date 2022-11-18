@@ -9,73 +9,15 @@
     <script type="text/javascript" src="{% static 'js/CRUD.js' %}"></script>
     <link rel="stylesheet" href="{% static 'css/crud.css' %}">
     <div class="container-lg">
-
-        <div class="table-responsive">
-            <div class="table-wrapper">
-                <div class="table-title">
-                    <div class="row">
-                        <div class="col-sm-8">
-                            <h2><b>Habit Tracker </b></h2>
-                        </div>
-                        <div class="col-sm-4">
-                            <button type="button" class="btn btn-info add-new"><i class="fa fa-plus"></i> Add
-                                New</button>
-                        </div>
-                    </div>
-                </div>
-                <table class="table table-bordered">
-                    <thead>
-                        <tr>
-                            <th>Habito</th>
-                            <th>Donde</th>
-                            <th>Cantidad</th>
-                            <th>Editar</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>Hacer ejercicio</td>
-                            <td>El gimnasio</td>
-                            <td>1 Hora</td>
-                            <td>
-                                <a class="add" title="Add" data-toggle="tooltip"><i
-                                        class="material-icons">&#xE03B;</i></a>
-                                <a class="edit" title="Edit" data-toggle="tooltip"><i
-                                        class="material-icons">&#xE254;</i></a>
-                                <a class="delete" title="Delete" data-toggle="tooltip"><i
-                                        class="material-icons">&#xE872;</i></a>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>Leer</td>
-                            <td>Cuando despierte</td>
-                            <td>10 Paginas</td>
-                            <td>
-                                <a class="add" title="Add" data-toggle="tooltip"><i
-                                        class="material-icons">&#xE03B;</i></a>
-                                <a class="edit" title="Edit" data-toggle="tooltip"><i
-                                        class="material-icons">&#xE254;</i></a>
-                                <a class="delete" title="Delete" data-toggle="tooltip"><i
-                                        class="material-icons">&#xE872;</i></a>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>Tomar agua</td>
-                            <td>Donde este</td>
-                            <td>2L </td>
-                            <td>
-                                <a class="add" title="Add" data-toggle="tooltip"><i
-                                        class="material-icons">&#xE03B;</i></a>
-                                <a class="edit" title="Edit" data-toggle="tooltip"><i
-                                        class="material-icons">&#xE254;</i></a>
-                                <a class="delete" title="Delete" data-toggle="tooltip"><i
-                                        class="material-icons">&#xE872;</i></a>
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-        </div>
+        <h1>Todos los hábitos</h1>
+        {% for habitos in object_list %}
+            <ul>
+                <li>ID: {{ habito.id }}</li>
+                <li>Hábito: {{ habito.habito }}</li>
+                <li>Dónde: {{ habito.donde }}</li>
+                <li>Cantidad: {{ habito.cantidad }}</li>
+            </ul>             
+        {% endfor %}
     </div>
 </body>
 {% endblock %}
